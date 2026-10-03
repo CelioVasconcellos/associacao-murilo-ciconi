@@ -39,13 +39,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="stat-ribbon" aria-label="Dados institucionais demonstrativos">
-        <div className="stat-intro">Acolher é cuidar do caminho inteiro.</div>
-        <div className="stat-item"><strong>1.000</strong><span>meta inicial de apoiadores, sem limite</span></div>
-        <div className="stat-item"><strong>R$ 10</strong><span>contribuição mensal mínima</span></div>
-        <div className="stat-item"><strong>Todo mês</strong><span>mais previsibilidade para a rede</span></div>
-      </div>
-
       <section className="section network-section" id="rede">
         <div className="section-heading">
           <span className="eyebrow">Uma rede, muitos gestos</span>
@@ -62,6 +55,12 @@ export default function Home() {
           </div>
           <p>Indicador fictício · meta inicial, sem limite de apoiadores ou de contribuição</p>
           <Link className="button button-light" href="/apoiar">Quero fazer parte da rede</Link>
+        </div>
+        <div className="stat-ribbon" aria-label="Dados institucionais demonstrativos">
+          <div className="stat-intro">Acolher é cuidar do caminho inteiro.</div>
+          <div className="stat-item"><strong>1.000</strong><span>meta inicial de apoiadores, sem limite</span></div>
+          <div className="stat-item"><strong>R$ 10</strong><span>contribuição mensal mínima</span></div>
+          <div className="stat-item"><strong>Todo mês</strong><span>mais previsibilidade para a rede</span></div>
         </div>
       </section>
 
