@@ -17,7 +17,7 @@ Acesse [http://localhost:3000](http://localhost:3000). As páginas e os dados at
 
 ## Prévia pública gratuita no Render
 
-O arquivo `render.yaml` configura um único Web Service Node no plano Free. O código é publicado no repositório GitHub `CelioVasconcellos/associacao-murilo-ciconi`; no Render, conecte esse repositório e crie o serviço usando o Blueprint.
+O arquivo `render.yaml` configura um único Web Service Node no plano Free. Conecte este repositório ao Render e crie o serviço usando o Blueprint.
 
 - Build: `npm ci && npm run build`
 - Start: `npm run start`
@@ -44,4 +44,3 @@ Antes de aceitar pagamentos reais, será necessário:
 - testar valores, expiração, pagamentos duplicados, recusas e cancelamentos em sandbox antes de habilitar produção.
 
 Cartão recorrente, Pix Automático e Pix pontual são fluxos diferentes. Não ativar cobranças mensais a partir do fluxo pontual descrito acima.
-
