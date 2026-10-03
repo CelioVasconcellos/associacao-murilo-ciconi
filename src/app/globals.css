@@ -289,6 +289,13 @@ button:focus-visible {
   background: var(--green-pale);
 }
 
+.hero-art {
+  position: relative;
+  min-height: 510px;
+  overflow: hidden;
+  animation: reveal-image 850ms ease-out both;
+}
+
 .hero-copy {
   position: relative;
   z-index: 1;
@@ -362,14 +369,14 @@ button:focus-visible {
 }
 
 .hero-visual {
-  position: relative;
-  min-height: 510px;
+  position: absolute;
+  inset: 0;
+  min-height: 0;
   overflow: hidden;
   background-color: #acb19e;
   background-image: linear-gradient(180deg, rgba(18, 40, 30, 0.04) 32%, rgba(18, 40, 30, 0.62) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85");
   background-position: center;
   background-size: cover;
-  animation: reveal-image 850ms ease-out both;
 }
 
 .hero-image-caption {
@@ -1762,6 +1769,10 @@ button:focus-visible {
   }
 
   .hero-visual {
+    min-height: 0;
+  }
+
+  .hero-art {
     min-height: 470px;
   }
 
@@ -1818,11 +1829,6 @@ button:focus-visible {
     font-size: 12px;
   }
 
-  .main-nav a[href="/#causa"],
-  .main-nav a[href="/#rede"] {
-    display: none;
-  }
-
   .main-nav a {
     white-space: nowrap;
   }
@@ -1841,6 +1847,32 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .hero-art {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: 310px auto;
+    overflow: visible;
+    background: var(--white);
+  }
+
+  .hero-visual {
+    position: relative;
+    inset: auto;
+    min-height: 310px;
+    animation: none;
+  }
+
+  .hero-image-caption {
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px;
+    border: 1px solid rgba(35, 87, 68, 0.25);
+    background: var(--white);
+    color: var(--green-dark);
+  }
+
   .hero-copy {
     padding: 56px 24px 42px;
   }
@@ -1854,18 +1886,8 @@ button:focus-visible {
     font-size: 14px;
   }
 
-  .hero-visual {
-    min-height: 310px;
-  }
-
-  .hero-image-caption {
-    right: 18px;
-    bottom: 17px;
-    left: 18px;
-  }
-
   .hero-image-caption span:first-child {
-    max-width: 220px;
+    max-width: none;
     font-size: 21px;
   }
 
@@ -2094,7 +2116,7 @@ button:focus-visible {
 .profile-update p { font-size: 15px; }
 .cause-copy p[style] { font-size: 15px !important; }
 
-.hero-visual .hero-image-caption span:first-child {
+.hero-image-caption span:first-child {
   max-width: 390px;
   color: var(--green-dark);
 }
@@ -2373,10 +2395,182 @@ button:focus-visible {
   cursor: pointer;
 }
 
+.one-time-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: clamp(35px, 7vw, 90px);
+  padding: 64px clamp(24px, 9vw, 132px) 86px;
+  background: var(--white);
+}
+
+.one-time-context h2 {
+  max-width: 480px;
+  margin-top: 12px;
+  font-size: 34px;
+}
+
+.one-time-context p {
+  max-width: 520px;
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.one-time-form {
+  display: grid;
+  gap: 20px;
+  max-width: 560px;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.one-time-fieldset {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.one-time-fieldset legend {
+  margin-bottom: 3px;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.one-time-amounts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.one-time-choice {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px;
+  border: 1px solid #b8c3b9;
+  background: var(--white);
+  color: var(--green-dark);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.one-time-choice:has(input:checked) {
+  border-color: var(--green);
+  background: var(--green-pale);
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+
+.one-time-choice input,
+.one-time-method input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  margin: 0;
+  accent-color: var(--green);
+}
+
+.one-time-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.one-time-method > span {
+  display: grid;
+  gap: 3px;
+}
+
+.one-time-method strong {
+  color: var(--green-dark);
+  font-size: 14px;
+}
+
+.one-time-method > span > span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.one-time-notice,
+.one-time-confirmation,
+.one-time-card-pending > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.one-time-pending {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.one-time-pending > .demo-qr {
+  width: 104px;
+}
+
+.one-time-pending-details,
+.one-time-card-pending {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.one-time-pending-details > strong,
+.one-time-card-pending > strong {
+  color: var(--green-dark);
+}
+
+.one-time-pending-details > span,
+.one-time-pending-details code,
+.one-time-card-pending code {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.one-time-card-pending {
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+  background: var(--white);
+}
+
+.one-time-confirmation {
+  padding: 12px;
+  border-left: 3px solid var(--green);
+  background: var(--green-pale);
+  color: var(--green-dark);
+}
+
 @media (max-width: 900px) {
   .supporter-section {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .one-time-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -2384,6 +2578,34 @@ button:focus-visible {
   .supporter-section {
     gap: 28px;
     padding: 48px 23px 65px;
+  }
+
+  .one-time-section {
+    gap: 25px;
+    padding: 48px 23px 65px;
+  }
+
+  .one-time-context h2 {
+    font-size: 30px;
+  }
+
+  .one-time-form {
+    gap: 17px;
+    padding: 19px;
+  }
+
+  .one-time-amounts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .one-time-pending {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 11px;
+    padding: 12px;
+  }
+
+  .one-time-pending > .demo-qr {
+    width: 76px;
   }
 
   .supporter-context h2 {

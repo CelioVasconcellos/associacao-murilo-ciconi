@@ -7,19 +7,21 @@ export default function Home() {
     <>
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <span className="eyebrow">Cuidado que chega até a casa</span>
-          <h1 id="hero-title">Enquanto o hospital cuida da saúde, <em>ajudamos a manter o lar em pé.</em></h1>
+          <span className="eyebrow">Apoio que acompanha famílias</span>
+          <h1 id="hero-title">Durante o tratamento, toda a família precisa de apoio para seguir sua rotina.</h1>
           <p className="hero-text">Uma rede de apoio para que famílias atravessem o tratamento sem carregar sozinhas o peso das contas essenciais.</p>
           <div className="hero-actions">
-            <Link className="button" href="/vitrine">Quero Ajudar</Link>
+            <Link className="button" href="/doar">Fazer doação pontual</Link>
             <Link className="button button-light" href="#apoio">Preciso de Apoio</Link>
           </div>
           <p className="hero-note">Nesta prévia, todos os casos e valores são fictícios.</p>
         </div>
-        <div className="hero-visual" role="img" aria-label="Imagem ilustrativa da fachada de uma moradia familiar">
-          <span className="hero-index">01 / 03</span>
+        <div className="hero-art">
+          <div className="hero-visual" role="img" aria-label="Ilustração de uma casa acolhedora">
+            <span className="hero-index">01 / 03</span>
+          </div>
           <div className="hero-image-caption">
-            <span>Quem está em tratamento no hospital, precisa de um lar em pé para voltar.</span>
+            <span>Quem acompanha um tratamento também precisa de um lugar acolhedor para retornar.</span>
             <span className="image-label">Imagem ilustrativa</span>
           </div>
         </div>
@@ -28,14 +30,14 @@ export default function Home() {
       <section className="manifesto-section" id="causa" aria-labelledby="manifesto-title">
         <div className="manifesto-heading">
           <span className="eyebrow">A causa · Nossa história</span>
-          <h2 id="manifesto-title">Para voltar, é preciso que o lar continue em pé.</h2>
+          <h2 id="manifesto-title">O cuidado precisa alcançar toda a família.</h2>
           <Link className="text-link" href="#contas">Veja como o apoio pode chegar</Link>
         </div>
         <div className="manifesto-copy">
           <p>Ninguém espera receber a notícia de que alguém da família tem uma doença grave. O diagnóstico abala a rotina e os alicerces de qualquer casa, principalmente de famílias que já enfrentam dificuldades.</p>
           <p>O tratamento de uma criança costuma exigir a presença constante de uma pessoa cuidadora. Muitas vezes, alguém precisa reduzir ou interromper o trabalho. A renda da casa diminui, enquanto aluguel, água, luz, gás e transporte continuam sendo necessários.</p>
           <p>Para mães solo, esse peso pode se concentrar ainda mais. Doações de alimentos são essenciais, mas não cobrem todas as necessidades que mantêm uma família em casa durante um tratamento longo.</p>
-          <p className="manifesto-emphasis">Apoiar também é ajudar a manter o lar em pé, até que a família possa retomar sua rotina.</p>
+          <p className="manifesto-emphasis">Apoiar também é cuidar da rotina, até que a família possa retomar seus planos.</p>
         </div>
       </section>
 

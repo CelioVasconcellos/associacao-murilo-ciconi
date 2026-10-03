@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Associação Murilo Ciconi | Cuidar também é manter o lar",
+    default: "Associação Murilo Ciconi | Apoio às famílias",
     template: "%s | Associação Murilo Ciconi",
   },
   description:
-    "Uma rede de apoio demonstrativa para ajudar famílias a manter o lar durante o tratamento de uma criança.",
+    "Uma rede de apoio demonstrativa para acompanhar famílias durante tratamentos de saúde.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
