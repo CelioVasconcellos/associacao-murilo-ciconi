@@ -1307,6 +1307,324 @@ button:focus-visible {
   opacity: 0.55;
 }
 
+.admin-preview-section {
+  min-height: 70vh;
+  padding: 48px clamp(20px, 6vw, 88px) 88px;
+  background: var(--paper);
+}
+
+.admin-preview {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.admin-preview-warning {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 30px;
+  padding: 13px 16px;
+  border-left: 3px solid var(--rust);
+  background: #f4e8e2;
+  color: var(--green-dark);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-preview-warning strong {
+  color: var(--rust);
+}
+
+.admin-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-preview-header h1 {
+  margin: 7px 0 0;
+  font-family: var(--font-editorial);
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.admin-preview-header p,
+.admin-preview-section-heading p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-preview-badge {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid #c49a47;
+  color: #72571e;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-preview-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 22px 0 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-preview-summary > div {
+  display: grid;
+  gap: 2px;
+  padding: 14px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.admin-preview-summary > div:first-child {
+  padding-left: 0;
+}
+
+.admin-preview-summary > div:last-child {
+  border-right: 0;
+}
+
+.admin-preview-summary strong {
+  color: var(--green-dark);
+  font-family: var(--font-editorial);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.admin-preview-summary span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-preview-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-preview-tabs button {
+  min-height: 43px;
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin-preview-tabs button[aria-selected="true"] {
+  border-bottom-color: var(--green);
+  color: var(--green-dark);
+}
+
+.admin-preview-panel {
+  padding-top: 25px;
+}
+
+.admin-preview-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.admin-preview-section-heading h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-family: var(--font-editorial);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.admin-disabled-action {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #e9ece5;
+  color: var(--muted);
+  cursor: not-allowed;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-preview-table-wrap {
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.admin-preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-preview-table th,
+.admin-preview-table td {
+  min-width: 120px;
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  color: #52685d;
+  font-size: 13px;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.admin-preview-table th {
+  background: #f0f1eb;
+  color: var(--green-dark);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-preview-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-preview-table td strong,
+.admin-preview-table td span {
+  display: block;
+}
+
+.admin-preview-table td strong {
+  color: var(--green-dark);
+}
+
+.admin-preview-table td span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.admin-preview-table td a {
+  color: var(--green);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.admin-preview-table code {
+  color: var(--green-dark);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.admin-disabled-form {
+  margin: 24px 0 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: #f0f1eb;
+}
+
+.admin-disabled-form legend {
+  padding: 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-disabled-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-disabled-fields label {
+  display: grid;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-disabled-fields input:not([type="checkbox"]),
+.admin-disabled-fields textarea {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--muted);
+  font: inherit;
+}
+
+.admin-disabled-fields textarea {
+  resize: vertical;
+}
+
+.admin-disabled-fields .admin-consent-check {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-disabled-fields .admin-consent-check input {
+  width: 16px;
+  height: 16px;
+}
+
+.admin-preview-note {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .admin-preview-section {
+    padding: 30px 18px 56px;
+  }
+
+  .admin-preview-header,
+  .admin-preview-section-heading {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .admin-preview-header h1 {
+    font-size: 32px;
+  }
+
+  .admin-preview-summary > div {
+    padding: 12px 9px;
+  }
+
+  .admin-preview-summary strong {
+    font-size: 20px;
+  }
+
+  .admin-preview-summary span {
+    font-size: 11px;
+  }
+
+  .admin-disabled-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-disabled-fields .admin-consent-check {
+    grid-column: 1;
+  }
+}
+
 .pending-contribution {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
