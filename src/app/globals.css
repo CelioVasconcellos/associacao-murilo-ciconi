@@ -253,6 +253,33 @@ button:focus-visible {
   content: "→";
 }
 
+.nav-demo-link {
+  padding: 8px 10px;
+  border: 1px solid rgba(35, 87, 68, 0.5) !important;
+  background: transparent !important;
+  color: var(--green-dark) !important;
+}
+
+.nav-demo-link:hover {
+  background: var(--green-pale) !important;
+}
+
+@media (max-width: 1100px) {
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a:not(.nav-cta) {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .nav-cta {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 .hero {
   position: relative;
   display: grid;
@@ -1780,8 +1807,9 @@ button:focus-visible {
 
   .main-nav {
     width: 100%;
-    justify-content: space-between;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
     padding-top: 8px;
     border-top: 1px solid var(--line);
     font-size: 12px;
@@ -1794,6 +1822,10 @@ button:focus-visible {
 
   .main-nav a {
     white-space: nowrap;
+  }
+
+  .nav-demo-link {
+    font-size: 11px !important;
   }
 
   .nav-cta {

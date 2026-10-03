@@ -22,6 +22,7 @@ export default function SiteHeader() {
         <Link href="/vitrine">Vitrine de contas</Link>
         <Link href="/#rede">Rede de R$ 10</Link>
         <Link className="button nav-cta" href="/vitrine">Quero apoiar</Link>
+        <Link className="nav-demo-link" href="/gestao-demo" aria-label="Abrir painel administrativo demonstrativo">Admin demo</Link>
       </nav>
     </header>
   );
