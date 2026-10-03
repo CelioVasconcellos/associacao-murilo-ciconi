@@ -12,7 +12,6 @@ export default function Home() {
           <p className="hero-text">Uma rede de apoio para que famílias atravessem o tratamento sem carregar sozinhas o peso das contas essenciais.</p>
           <div className="hero-actions">
             <Link className="button" href="/doar">Fazer doação pontual</Link>
-            <Link className="button button-light" href="#apoio">Preciso de Apoio</Link>
           </div>
           <p className="hero-note">Nesta prévia, todos os casos e valores são fictícios.</p>
         </div>
@@ -100,14 +99,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="support-band" id="apoio">
-        <div>
-          <span className="eyebrow">Precisa de apoio?</span>
-          <h2>O acolhimento começa com escuta.</h2>
-          <p>O canal de solicitação ainda será definido junto com a equipe da Associação. Esta prévia não recebe pedidos e não deve ser usada para enviar informações pessoais ou de saúde.</p>
-        </div>
-        <Link className="button" href="/vitrine">Conhecer o projeto</Link>
-      </section>
     </>
   );
 }
